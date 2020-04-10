@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 별도의 커넥션 풀을 사용하기 위한 정보를 적어놓는 파일
+		maxActive : active 상태로 커넥션 풀에 존재할 수 있는 개수
+		maxIdle : 쉬고 있는 상태로 커넥션 풀에 존재할 수 있는 개수
+ -->
+
+<Context>
+	<Resource name = "jdbc/dogTest"
+		auth = "Container"
+		type = "javax.sql.DataSource"
+		username = "hr"
+		password = "hr"
+		driverClassName = "oracle.jdbc.driver.OracleDriver"
+		factory = "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		url = "jdbc:oracle:thin:@localhost:1521:XE"
+		maxActive = "500"
+		maxIdle = "100" />
+</Context>
